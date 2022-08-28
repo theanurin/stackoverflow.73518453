@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node-myname:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "3000:3000"
+    command: "npm run dev"
+    restart: always
+    volumes:
+      - .:/home/node/app
